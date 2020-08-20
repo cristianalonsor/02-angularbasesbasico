@@ -1,0 +1,14 @@
+<h1>Pagina del posts </h1>
+
+<ul class="list-group"> 
+    <!--hay que llamar al post, cuidado con los errores gramaticales-->  
+    <app-post *ngFor="let mensaje of mensajes | async"
+    [mensaje] ='mensaje' (clickPost)="escuchaClick( $event )" ></app-post>
+
+    <!--paso los mensajes por la tuberia '|async'
+    <li *ngFor="let mensaje of mensajes |async" class="list-group-item">
+        <h2>{{mensaje.title}}</h2>
+        <p>{{mensaje.body}}</p>
+    </li>-->
+
+</ul>
